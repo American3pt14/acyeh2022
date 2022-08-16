@@ -9,8 +9,8 @@ library(plyr)
 
 
 #----- Choose file to generate log-log plot (Priors) on -----#
-setwd("C:/Users/ayeh/Desktop/Projects/[Project] Mouse TCR-seq/Adaptive Submission/[Data] 1901T") #Loading sequences
-donor_file <- fread("1901T-B6_45_1-donor-spleen-all.csv")
+setwd("C:/...") #Specify file directory
+donor_file <- fread("filename.csv") #Specify file name
 # File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type", where:
 # 1) "rearrangement" is a unique string containing CDR3 nucleotides (e.g. "CTCTGCAGCCTGGGAATCAGAACGTGCGAAGCAGAAGACTCAGCACTGTACTTGTGCTCCAGCAGTCAAAGGGGTGACACCCAGTAC")
 # 2) "templates" is the number of counts identified from sequencing (e.g. "11")
