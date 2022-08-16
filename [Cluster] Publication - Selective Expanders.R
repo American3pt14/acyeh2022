@@ -36,10 +36,10 @@ recipient2 <- read.table(file = "recipient2_filename.tsv", sep = '\t', header = 
 
 ## 4) Coefficient matrix: (Generated from donor sequences using the script "[Cluster] Publication - Priors Generation")
 # This file contains output for 3 variables: "a","b","x_c" as seen in Figure 1B that describe the rate of clone size decay y=a*x^(-b), with x_c being the x-intercept
-coefficient_matrix <- "1901T-B6_45_1-donor-spleen-all_coeff_matrix.csv"
+coefficient_matrix <- "exp_coeff_matrix.csv"
 coefficients <- as.numeric(fread(coefficient_matrix))
 # For example, if a=0.75, b=3.03, x_c=82.0 (as in Fig 1b), then coefficients <- c(0.75,3.03,82.0)
-#coefficients <- c(0.75,3.03,82.0) # Delete this if line if importing coefficient variables
+# coefficients <- c(0.75,3.03,82.0) # Delete this if line if importing coefficient variables
 
 
 ## Numerical Variables (adjust below):
@@ -58,7 +58,7 @@ PMF <- 2
 
 
 ## Debugging output files (assumes large amounts of disk space)
-output_priors <- TRUE # This will output .csv files of p(N), p(B), p(B|N) and p(N|B)
+output_priors <- FALSE # This will output .csv files of p(N), p(B), p(B|N) and p(N|B)
 output_clone_files <- TRUE # This will output .csv file of background clone probabilities
 
 
