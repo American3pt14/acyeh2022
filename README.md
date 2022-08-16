@@ -15,8 +15,8 @@ File structure for each of the above must contain the following named columns:
 3) "frame_type" - is either "In" or "Out" - all frame_types set to "Out" are omitted from calculation (this column is derived from Adaptive's TCRB (v3) assay). If want to use all TCRs in file, set all templates to "frame_type" equal to "In"
 
 # Scripts
-There are 2 scripts provided:
-1) Priors Generation Script: This is used to generate a log-log plot of TCR count vs. clonality of the donor pool.  The output of this file named "exp_coeff_matrix.csv" will be used as input for the next Script.
+There are 2 scripts provided (run sequentially):
+1) Priors Generation Script: This is used to generate a log-log plot of TCR count vs. clonality of the donor pool, which is used as a Bayesian prior.  The output of this file named "exp_coeff_matrix.csv" will be used as input for the next Script.
 2) Selective Expanders Script: This is used to calculate a p-value for each TCR specified from the input files used in the manuscript. Significant p-values represent clones that are "selectively expanded". The output of this file will have the suffix "- final probabilities.csv".
 
 Notes:
