@@ -12,7 +12,7 @@ Input files needed to run scripts include:
 File structure for each of the above must contain the following named columns:
 1) "rearrangement" - a unique string containing CDR3 nucleotides (e.g. "CTCTGCAGCCTGGGAATCAGAACGTGCGAAGCAGAAGACTCAGCACTGTACTTGTGCTCCAGCAGTCAAAGGGGTGACACCCAGTAC")
 2) "templates" - is the number of counts identified from sequencing (e.g. "11")
-3) "frame_type" - is either "In" or "Out" - all frame_types set to "Out" are omitted from calculation (this column is derived from Adaptive's TCRB (v3) assay). If want to use all TCRs in file, set all templates to "In"
+3) "frame_type" - is either "In" or "Out" - all frame_types set to "Out" are omitted from calculation (this column is derived from Adaptive's TCRB (v3) assay). If want to use all TCRs in file, set all templates to "frame_type" equal to "In"
 
 # Scripts
 There are 2 scripts provided:
