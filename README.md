@@ -17,7 +17,7 @@ File structure for each of the above must contain the following named columns:
 # Scripts
 There are 2 scripts provided:
 1) Priors Generation Script: This is used to generate a log-log plot of TCR count vs. clonality of the donor pool.  The output of this file named "exp_coeff_matrix.csv" will be used as input for the next Script.
-2) Selective Expanders Script: This is used to calculate a p-value for each TCR specified from the input files. Significant p-values represent clones that are "selectively expanded".
+2) Selective Expanders Script: This is used to calculate a p-value for each TCR specified from the input files. Significant p-values represent clones that are "selectively expanded". The output of this file will have the suffix "- final probabilities.csv".
 
 Notes:
 1) The first script should run fairly quickly on a typical computing desktop (a few minutes for a file with ~1M naive TCRs)
