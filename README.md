@@ -36,12 +36,13 @@ The output of the above file should be named `exp_coeff_matrix.csv` and represen
 
 Now, let's download 2 recipient data file (see Zenodo link under samples folder). To begin with, we can download the following files: `1901T-Gp1-1-spleen.tsv` and `1901T-Gp1-2-spleen.tsv`.  Place these two files in the same directory as `exp_coeff_matrix.csv` and '1901T-donor-spleen-all-supermerge.csv'.
 
-Next, download the script "[Cluster] Publication - Selective Expanders.R", change the working directory in the script to where the donor data file is located, and make sure the proper donor file is referred to:
+Next, download the script "[Cluster] Publication - Selective Expanders.R", change the working directory in the script to where the donor data file is located, and make sure the proper donor file is referred to in the script:
 ```
 analysis_dir <- "/..."
 outputdir <- paste0(analysis_dir,"/Analysis") # Output files will be sent to "/Analysis" subdirectory
 ```
-Make sure under the File Input Requirements heading, the appropriate file are referred to:
+
+Next, make sure under the "File input requirements" subheading, the appropriate file are referred to:
 ```
 ## File input requirements: 
 ## 1) Sequenced donor pool
@@ -63,3 +64,21 @@ recipient2 <- read.table(file = "1901T-Gp1-2-spleen.tsv", sep = '\t', header = T
 # This file contains output for 3 variables: "a","b","x_c" as seen in Figure 1B that describe the rate of clone size decay y=a*x^(-b), with x_c being the x-intercept
 coefficient_matrix <- "exp_coeff_matrix.csv"
 ```
+
+Next, we have several script parameters that can be modified.  The cutoffs below reflect what is used in Yeh AC, et al, Figure 3D (B6 to B6D2F1 twin transplant systems):
+```
+## Numerical Variables (adjust below):
+## 1) Donor pool size: - number of donor T-cells donated to each recipient (adjust for each experiment / recipient pair)
+D1 <- 2000000
+D2 <- 2000000
+
+## 2) Combined recipient TCR clone count threshold - default set to 10 (see Figure S4)
+TCR_cutoff <- 10
+
+## 3) Donor TCR count probability threshold - default cutoff set to 0.001 (see Figure S4)
+numerical_cutoff <- 1e-3
+
+## 4) Negative binomial PMF variance - default set to 2 (see Figure S5)
+PMF <- 2
+```
+
