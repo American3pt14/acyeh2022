@@ -42,7 +42,7 @@ analysis_dir <- "/..."
 outputdir <- paste0(analysis_dir,"/Analysis") # Output files will be sent to "/Analysis" subdirectory
 ```
 
-Next, make sure under the "File input requirements" subheading, the appropriate file are referred to:
+Next, make sure under the "File input requirements" subheading, the appropriate file are referred to.  Of note, we have to specify the donor file and two recipient files of interset to compare.
 ```
 ## File input requirements: 
 ## 1) Sequenced donor pool
@@ -87,4 +87,7 @@ We can also modify the intermediate output steps below.  Can set both to "FALSE"
 ## Debugging output files (assumes large amounts of disk space)
 output_priors <- FALSE # This will output .csv files of p(N), p(B), p(B|N) and p(N|B)
 output_clone_files <- TRUE # This will output .csv file of background clone probabilities
-``
+```
+
+Now we can run the script "[Cluster] Publication - Selective Expanders.R" in the directory.
+The final output file should be labeled "Exp1 - final probabilities.csv", which contains p-values for each TCR clonotype that represents the probability that the particular clonotype expanded similarly between the two recipients given.
