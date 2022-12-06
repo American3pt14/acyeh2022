@@ -7,7 +7,7 @@ library(data.table)
 ## This is run in a separate script and loaded in file inpu requirements part 4) below
 
 ## Experiment name:
-experiment <- "_Exp1" # Used for output file, change as needed
+experiment <- "Exp1" # Used for output file, change as needed
 
 ## Set directories:
 ## Place all required files in the analysis_dir directory set below:
