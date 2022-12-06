@@ -25,10 +25,11 @@ Notes:
 3) The second script is  described in Supplementary Materials and Methods - "Probabilistic Simulation of Post-transplant TCR Expansion"
 
 # Quick Start
-Let's first download donor data file (see Zenodo link under samples folder). These should include the following file: `1901T-donor-spleen-all-supermerge.csv`.
+Let's first download donor data file (see Zenodo link under samples folder). This should include the following donor file: `1901T-donor-spleen-all-supermerge.csv`.
 
 Next, download the script "[Cluster] Publication - Priors Generation.R", change the working directory in the script to where the donor data file is located, and make sure the proper donor file is referred to:
 ```
 setwd("C:/...") #Specify file directory
 donor_file <- fread("1901T-donor-spleen-all-supermerge.csv") #Specify file name
 ```
+The output of the above file should be named `exp_coeff_matrix.csv` and represents the coefficients for the log-log plot of the TCR clonality sizes vs. frequency.
