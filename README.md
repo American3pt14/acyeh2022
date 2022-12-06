@@ -91,3 +91,11 @@ output_clone_files <- TRUE # This will output .csv file of background clone prob
 
 Now we can run the script "[Cluster] Publication - Selective Expanders.R" in the directory.
 The final output file should be labeled "Exp1 - final probabilities.csv", which contains p-values for each TCR clonotype that represents the probability that the particular clonotype expanded similarly between the two recipients given.
+
+An example of the output file is as follows:
+experiment	donor_count	donor_total	recipient1_count	recipient1_total	recipient2_count	recipient2_total	rearrangement	final_prob
+Exp1	0	652099	1	171490	607	103692	AACTTCTCCCTCATTCTGGAGTTGGCTACCCCCTCTCAGACATCAGTGTACTTCTGTGCCAGCGGTGATACACAGCAGGCTCCGCTT	2.08E-40
+Exp1	0	652099	1	171490	581	103692	CTCCTGCTGGAATTGGCTTCTCCCTCTCAGACATCTTTGTACTTCTGTGCCAGCAGTGACGGACAGGGGGCGGGCTCCGACTACACC	8.42E-39
+
+
+
