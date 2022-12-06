@@ -43,6 +43,8 @@ outputdir <- paste0(analysis_dir,"/Analysis") # Output files will be sent to "/A
 ```
 Make sure under the File Input Requirements heading, the appropriate file are referred to:
 ```
+## File input requirements: 
+## 1) Sequenced donor pool
 donor_pool <- fread("1901T-donor-spleen-all-supermerge.csv")  
 # File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type", where:
 # 1) "rearrangement" is a unique string containing CDR3 nucleotides (e.g. "CTCTGCAGCCTGGGAATCAGAACGTGCGAAGCAGAAGACTCAGCACTGTACTTGTGCTCCAGCAGTCAAAGGGGTGACACCCAGTAC")
