@@ -41,4 +41,23 @@ Next, download the script "[Cluster] Publication - Selective Expanders.R", chang
 analysis_dir <- "/..."
 outputdir <- paste0(analysis_dir,"/Analysis") # Output files will be sent to "/Analysis" subdirectory
 ```
+Make sure under the File Input Requirements heading, the appropriate file are referred to:
+```
+donor_pool <- fread("1901T-donor-spleen-all-supermerge.csv")  
+# File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type", where:
+# 1) "rearrangement" is a unique string containing CDR3 nucleotides (e.g. "CTCTGCAGCCTGGGAATCAGAACGTGCGAAGCAGAAGACTCAGCACTGTACTTGTGCTCCAGCAGTCAAAGGGGTGACACCCAGTAC")
+# 2) "templates" is the number of counts identified from sequencing (e.g. "11")
+# 3) "frame_type" is either "In" or "Out" - we omit all frame_types that are set to "Out"
 
+## 2) Sequenced recipient pool 1
+recipient1 <- read.table(file = "1901T-Gp1-1-spleen.tsv", sep = '\t', header = TRUE)  
+# File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type" as above
+
+## 3) Sequenced recipient pool 2
+recipient2 <- read.table(file = "1901T-Gp1-2-spleen.tsv", sep = '\t', header = TRUE)  
+# File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type" as above
+
+## 4) Coefficient matrix: (Generated from donor sequences using the script "[Cluster] Publication - Priors Generation")
+# This file contains output for 3 variables: "a","b","x_c" as seen in Figure 1B that describe the rate of clone size decay y=a*x^(-b), with x_c being the x-intercept
+coefficient_matrix <- "exp_coeff_matrix.csv"
+```
