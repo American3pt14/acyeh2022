@@ -27,4 +27,6 @@ Notes:
 # Quick Start
 Let's first download donor data file (see Zenodo link under samples folder). These should include the following file: `1901T-donor-spleen-all-supermerge.csv`.
 
-Next, run the script "[Cluster] Publication - Priors Generation.R"
+Next, download the script "[Cluster] Publication - Priors Generation.R", change the working directory in the script to where the donor data file is located, and make sure the proper donor file is referred to:
+```setwd("C:/...") #Specify file directory
+   donor_file <- fread("1901T-donor-spleen-all-supermerge.csv") #Specify file name```
