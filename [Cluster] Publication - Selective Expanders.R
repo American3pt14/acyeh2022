@@ -50,10 +50,10 @@ D2 <- 2000000
 ## 2) Combined recipient TCR clone count threshold - default set to 10 (see Figure S4)
 TCR_cutoff <- 10
 
-## 3) Donor TCR count probability threshold - default cutoff set to 0.001 (see Figure S5)
+## 3) Donor TCR count probability threshold - default cutoff set to 0.001 (see Figure S4)
 numerical_cutoff <- 1e-3
 
-## 4) Negative binomial PMF variance - default set to 2 (see Figure S6)
+## 4) Negative binomial PMF variance - default set to 2 (see Figure S5)
 PMF <- 2
 
 
