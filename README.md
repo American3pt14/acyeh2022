@@ -100,7 +100,4 @@ An example of the output file is as follows:
 |Exp1	|0	|652099	|1	|171490	|136	|103692	|TCTCTCACTGTGACATCTGCCCAGAAGAACGAGATGGCCGTTTTTCTCTGTGCCAGCAGTCGGGACTGGGGGATATATGAACAGTAC	|1.51E-11
 |Exp1	|26	|652099	|0	|171490	|61	|103692	|CTACTTTTACATATATCTGCCGTGGATCCAGAAGACTCAGCTGTCTATTTTTGTGCCAGCAGCCAAGACTGGGGGTATGAACAGTAC	|1.05E-10
 
-
-
-
-
+the "count" columns reflect clonotype count, "total" columns represent total number of TCRs from given sample, and "final_prob" columns gives the final calculated p-values for each TCR clonotype.
