@@ -23,3 +23,6 @@ Notes:
 1) The first script should run fairly quickly on a typical computing desktop (a few minutes for a file with ~1M naive TCRs)
 2) The second script typically takes several hours (and potentially up to several days for pools larger clone sizes) when run on donor and recipient files with ~100-200k TCR counts.
 3) The second script is  described in Supplementary Materials and Methods - "Probabilistic Simulation of Post-transplant TCR Expansion"
+
+# Quick Start
+Let's first download donor and recipient data files (see Zenodo link under samples folder)
