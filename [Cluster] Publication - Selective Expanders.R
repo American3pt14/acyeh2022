@@ -11,7 +11,7 @@ experiment <- "_Exp1" # Used for output file, change as needed
 
 ## Set directories:
 ## Place all required files in the analysis_dir directory set below:
-analysis_dir <- "/..."
+analysis_dir <- "/..." # Specify file directory
 outputdir <- paste0(analysis_dir,"/Analysis") # Output files will be sent to "/Analysis" subdirectory
 
 setwd(analysis_dir)
