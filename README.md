@@ -82,3 +82,9 @@ numerical_cutoff <- 1e-3
 PMF <- 2
 ```
 
+We can also modify the intermediate output steps below.  Can set both to "FALSE" to streamline disk space usage; in this case, only the final output file with all p-values for each TCR clonotype will be returned.
+```
+## Debugging output files (assumes large amounts of disk space)
+output_priors <- FALSE # This will output .csv files of p(N), p(B), p(B|N) and p(N|B)
+output_clone_files <- TRUE # This will output .csv file of background clone probabilities
+``
