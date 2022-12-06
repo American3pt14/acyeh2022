@@ -7,12 +7,12 @@ library(data.table)
 ## This is run in a separate script and loaded in file inpu requirements part 4) below
 
 ## Experiment name:
-experiment <- "run_08_16_22_Exp1" # Used for output file, change as needed
+experiment <- "_Exp1" # Used for output file, change as needed
 
 ## Set directories:
 ## Place all required files in the analysis_dir directory set below:
-analysis_dir <- "/fh/fast/hill_g/Albert/TCR Sequences"
-outputdir <- paste0(analysis_dir,"/Analysis_081622") # Output files will be sent to "/Analysis" subdirectory
+analysis_dir <- "/..."
+outputdir <- paste0(analysis_dir,"/Analysis") # Output files will be sent to "/Analysis" subdirectory
 
 setwd(analysis_dir)
 message(paste0("Creating directory ", outputdir))
@@ -20,18 +20,18 @@ dir.create(outputdir)
 
 ## File input requirements: 
 ## 1) Sequenced donor pool
-donor_pool <- fread("donor_filename.csv")  
+donor_pool <- fread("1901T-donor-spleen-all-supermerge.csv")  
 # File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type", where:
 # 1) "rearrangement" is a unique string containing CDR3 nucleotides (e.g. "CTCTGCAGCCTGGGAATCAGAACGTGCGAAGCAGAAGACTCAGCACTGTACTTGTGCTCCAGCAGTCAAAGGGGTGACACCCAGTAC")
 # 2) "templates" is the number of counts identified from sequencing (e.g. "11")
 # 3) "frame_type" is either "In" or "Out" - we omit all frame_types that are set to "Out"
 
 ## 2) Sequenced recipient pool 1
-recipient1 <- read.table(file = "recipient1_filename.tsv", sep = '\t', header = TRUE)  
+recipient1 <- read.table(file = "1901T-Gp1-1-spleen.tsv", sep = '\t', header = TRUE)  
 # File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type" as above
 
 ## 3) Sequenced recipient pool 2
-recipient2 <- read.table(file = "recipient2_filename.tsv", sep = '\t', header = TRUE)  
+recipient2 <- read.table(file = "1901T-Gp1-2-spleen.tsv", sep = '\t', header = TRUE)  
 # File structure must contain the following named columns: 1) "rearrangement", 2) "templates", 3) "frame_type" as above
 
 ## 4) Coefficient matrix: (Generated from donor sequences using the script "[Cluster] Publication - Priors Generation")
