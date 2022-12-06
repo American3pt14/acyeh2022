@@ -25,4 +25,6 @@ Notes:
 3) The second script is  described in Supplementary Materials and Methods - "Probabilistic Simulation of Post-transplant TCR Expansion"
 
 # Quick Start
-Let's first download donor and recipient data files (see Zenodo link under samples folder). These should include the following files: ``1901T-donor-spleen-all-supermerge.csv``
+Let's first download donor data file (see Zenodo link under samples folder). These should include the following file: `1901T-donor-spleen-all-supermerge.csv`.
+
+Next, run the script "[Cluster] Publication - Priors Generation.R"
