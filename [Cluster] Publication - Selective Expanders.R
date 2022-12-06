@@ -629,6 +629,7 @@ calc_nbinom_parameters <- function(mean, variance)
       }
 
       final_prob<- sum(vector_S_minus_B) *2  # Note have to multiple final probability by 2 (1-sided vs. 2-sided thing)
+      if(final_prob>1){final_prob <- 1}
       
       rearrangement <- all_names[i]
       recipient1_count <- all_recip_1_count[[i]][1]
